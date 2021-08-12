@@ -9,6 +9,8 @@ import java.util.Scanner;
 Declaring Employee Pay Roll Services
  */
 public class EmpPayRollServices {
+    public EmpPayRollServices() {
+    }
     public enum IOServices{CONSOLE_IO, FILE_IO,DB_IO,REST_IO}
   private  List<EmpPayRollData> empPayRollList;
     public EmpPayRollServices(List<EmpPayRollData> empPayRollList) {
@@ -67,5 +69,13 @@ public class EmpPayRollServices {
         if(ioServices.equals(IOServices.FILE_IO))
             return new EmpPayRollIOServices().countEntries();
         return 0;
+    }
+    /*
+   Declaring The Read Data Method
+   Calling The Read Data Method In IO Services
+   */
+    public void readData(IOServices ioServices) {
+        if(ioServices.equals(IOServices.FILE_IO))
+       new EmpPayRollIOServices().readData();
     }
 }

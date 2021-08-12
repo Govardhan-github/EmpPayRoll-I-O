@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 /*
 Declaring Employee Pay Roll IO Services Class
@@ -49,5 +50,19 @@ public class EmpPayRollIOServices {
             e.printStackTrace();
         }
         return entries;
+    }
+    /*
+    Declaring The read Employee Pay Data Method
+    Read The Each Line In The File IO
+     */
+    public void readData() {
+        List<EmpPayRollData> empPayRollList = new ArrayList<>();
+        try{
+            Files.lines(new File(PAYROLL_FILE_NAME).toPath())
+                    .map(line -> line.trim())
+                    .forEach(line -> System.out.println(line));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

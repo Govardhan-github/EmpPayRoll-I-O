@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmpPayRollTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-12T15:24:42" hostname="DESKTOP-TK8JRTA" time="0.128">
+<testsuite name="com.bridgelabz.EmpPayRollTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-12T16:14:36" hostname="DESKTOP-TK8JRTA" time="0.247">
   <properties/>
-  <testcase name="given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries()" classname="com.bridgelabz.EmpPayRollTest" time="0.128"/>
+  <testcase name="given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries()" classname="com.bridgelabz.EmpPayRollTest" time="0.225"/>
+  <testcase name="givenFileOnReadingFromFileShouldMatchEmployeeCount()" classname="com.bridgelabz.EmpPayRollTest" time="0.017"/>
   <system-out><![CDATA[EmpPayRollData{id=1, name='GOPI', salary=30000.0}
+EmpPayRollData{id=2, name='Govardhan Reddy', salary=35000.0}
+EmpPayRollData{id=3, name='Govardhan', salary=40000.0}
+EmpPayRollData{id=1, name='GOPI', salary=30000.0}
 EmpPayRollData{id=2, name='Govardhan Reddy', salary=35000.0}
 EmpPayRollData{id=3, name='Govardhan', salary=40000.0}
 ]]></system-out>

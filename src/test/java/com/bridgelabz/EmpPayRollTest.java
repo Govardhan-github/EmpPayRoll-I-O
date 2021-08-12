@@ -22,4 +22,9 @@ public class EmpPayRollTest {
             long entries = empPayRollServices.countEntries(EmpPayRollServices.IOServices.FILE_IO);
              Assertions.assertEquals(3,entries);
         }
+    @Test
+    public void givenFileOnReadingFromFileShouldMatchEmployeeCount(){
+        EmpPayRollServices empPayRollServices=new EmpPayRollServices();
+         empPayRollServices.readData(EmpPayRollServices.IOServices.FILE_IO);
+    }
 }
