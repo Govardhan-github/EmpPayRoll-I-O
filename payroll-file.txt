@@ -1,0 +1,3 @@
+EmpPayRollData{id=1, name='GOPI', salary=30000.0}
+EmpPayRollData{id=2, name='Govardhan Reddy', salary=35000.0}
+EmpPayRollData{id=2, name='Govardhan', salary=40000.0}
