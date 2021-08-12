@@ -50,4 +50,22 @@ public class EmpPayRollServices {
         double salary = consoleInputReader.nextDouble();
         empPayRollList.add(new EmpPayRollData(id,name,salary));
     }
+    /*
+    Declaring The PrintData Method
+    Calling The Print Data Method In IO Services
+    */
+    public void printData(IOServices ioServices) {
+        if(ioServices.equals(IOServices.FILE_IO)){
+            new EmpPayRollIOServices().printData();
+        }
+    }
+    /*
+    Declaring The CountEntries Method
+    Calling The Count Entries Method In IO Services
+    */
+    public long countEntries(IOServices ioServices) {
+        if(ioServices.equals(IOServices.FILE_IO))
+            return new EmpPayRollIOServices().countEntries();
+        return 0;
+    }
 }
