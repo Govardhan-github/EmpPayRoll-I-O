@@ -9,6 +9,7 @@ import java.util.Scanner;
 Declaring Employee Pay Roll Services
  */
 public class EmpPayRollServices {
+    public enum IOServices{CONSOLE_IO, FILE_IO,DB_IO,REST_IO}
   private  List<EmpPayRollData> empPayRollList;
     public EmpPayRollServices(List<EmpPayRollData> empPayRollList) {
         this.empPayRollList = empPayRollList;
@@ -22,14 +23,17 @@ public class EmpPayRollServices {
         EmpPayRollServices empPayRollServices = new EmpPayRollServices(empPayRollList);
         Scanner consoleInputReader = new Scanner(System.in);
         empPayRollServices.readEmpPayRollData(consoleInputReader);
-        empPayRollServices.writeEmpPayRollData();
+        empPayRollServices.writeEmpPayRollData(IOServices.CONSOLE_IO);
     }
     /*
     Declaring the Write Employee Roll Data Method
     Printing The Details Of Employee
      */
-    private void writeEmpPayRollData() {
-        System.out.println("Writing Employee Data To Console :" +empPayRollList);
+    public void writeEmpPayRollData(IOServices ioServices) {
+        if(ioServices.equals(IOServices.CONSOLE_IO))
+            System.out.println("Writing Employee Data To Console :" +empPayRollList);
+        else if(ioServices.equals(IOServices.FILE_IO));
+            new EmpPayRollIOServices().writeData(empPayRollList);
     }
     /*
     Declaring Read Emp Pay Roll Data Method
