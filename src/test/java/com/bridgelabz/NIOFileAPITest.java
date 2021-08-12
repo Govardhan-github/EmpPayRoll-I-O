@@ -48,4 +48,13 @@ Create Files
                                                    Path.toString().startsWith("temp"))
                                                    .forEach(System.out::print);
     }
+    /*
+    Test Method To Directory To Connect With the WatchServices
+     */
+    @Test
+    public void givenADirectoryWhenWatchedListAllTheActivities() throws IOException {
+        Path dir = Paths.get(HOME + "/" + PLAY_WITH_NIO);
+        Files.list(dir).filter(Files::isRegularFile).forEach(System.out::println);
+        new Java8WatchServiceExample(dir).processEvents();
+    }
 }

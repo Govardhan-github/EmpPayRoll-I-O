@@ -11,7 +11,6 @@ public class EmpPayRollData {
         this.name = name;
         this.salary = salary;
     }
-
     @Override
     public String toString() {
         return "EmpPayRollData{" +
